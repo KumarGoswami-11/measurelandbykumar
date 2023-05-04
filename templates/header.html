@@ -1,0 +1,40 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HomePage</title>
+  <!-- <link rel="stylesheet" href="/static/css/style.css"> -->
+  <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+</head>
+<body>
+  
+
+<div class="containerNavBar">
+  <nav class="nav-bar">
+    <ul>
+      <li><a class="nav-text" href="/">Home</a></li>
+      <li><a class="nav-text" href="/about-us">About Us</a></li>
+      <li><a class="nav-text" href="{% url 'contact' %}">Contact Us</a></li>
+    </ul>
+  </nav>
+</div>
+
+<div class="titleHome">
+  <h1>Measurement Land Value in different units</h1>
+</div>
+
+<!-- marquee HECTER -->
+<div class="marq">
+  <marquee onmouseover="stop()" onmouseout="start()">
+    <a class="marA" href="/">Hecter</a> &nbsp; &nbsp; &nbsp;
+    <a class="marA" href="/bigha-page">Bigha</a>&nbsp; &nbsp; &nbsp;
+    <a class="marA" href="/meter-page">Meter</a>&nbsp; &nbsp; &nbsp;
+    <a class="marA" href="/feet-page">Foot</a>
+  </marquee>
+</div>
+  <!-- end marquee -->
+<br />

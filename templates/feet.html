@@ -1,0 +1,47 @@
+{% extends 'base.html' %} 
+
+{% block bodycontent %}
+
+<div class="titlePage">
+    <h2>Valuation for Foot</h2>
+</div><br>
+
+<div class="myform">
+  <!-- feet -->
+  <div class="myform">
+    <div class="grid-container">
+
+      <div class="grid-input">
+        <form method="post">
+          {% csrf_token %}
+          <label for="foot">Enter Foot value:</label>
+          <input type="text" id="foot" name="foot" required />
+          <input type="submit" value="Submit" />
+        </form>
+      </div>
+      <div class="grid-output">
+     <h4>Value of {{num}} Feet :-</h4> 
+        {% for i in answer %}
+          <p>{{i}}</p>
+        {% endfor %} 
+    </div>
+    
+    </div>   
+    
+  </div>
+    <!-- feet End -->
+
+</div>
+
+<div class="paraPart">
+  <p class="para">
+    फुट या फीट एक लंबाई या दूरी का मापन करने के लिए एक इंग्लिश मापन इकाई है। इस मापन इकाई को सामान्यतः लंबाई को मापने के लिए इस्तेमाल किया जाता है। एक फुट लगभग 30.48 सेमी या अंग्रेजी में 12 इंच के बराबर होता है।<br>
+
+फुट या फीट को हम आमतौर पर बढ़ते या कम होने वाली लंबाई को मापने के लिए इस्तेमाल करते हैं। इस मापन इकाई को भारत में अधिकतर लोग उपयोग नहीं करते हैं, लेकिन कुछ क्षेत्रों में इसका उपयोग होता है।<br>
+
+विशेषकर, अमेरिका में, जहां फुट या फीट को इंग्रेजी में "foot" या "feet" कहा जाता है, इसका व्यापक उपयोग होता है। वहाँ, लंबाई, ऊंचाई और दूरी को मापने के लिए इसका उपयोग किया जाता है।
+    
+  </p>
+</div>
+
+{% endblock %}

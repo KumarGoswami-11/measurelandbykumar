@@ -1,0 +1,49 @@
+{% extends 'base.html' %} 
+
+{% block bodycontent %}
+
+<div class="titlePage">
+  <h2>Valuation for Hecter</h2>
+</div><br>
+
+<div class="myform">
+  <!-- Hecter -->
+  <div class="grid-container">
+    
+    <div class="grid-input">
+      <form method="post">
+        {% csrf_token %}
+        <label for="hect">Enter Hecter value:</label>
+        <input  type="text" id="hect" name="hect" required />
+        <input type="submit" value="Submit" />
+      </form>
+    </div>
+
+    <div class="grid-output">
+     <h4>Value of {{num}} hecter :-</h4> 
+        {% for i in answer%}
+          <p>{{i}}</p>
+          {% endfor %} 
+    </div>
+
+  </div>
+  <!-- Hecter End -->
+
+
+
+  
+</div>
+
+<div class="paraPart">
+  <p class="para">
+    हेक्टर यूनिट एक लंबित मापन इकाई है जो आमतौर पर भूमि विवरण में प्रयुक्त होती है। इस इकाई को लंबाई और चौड़ाई के विभिन्न संयोजनों के रूप में व्यक्त किया जाता है।<br>
+
+हेक्टर यूनिट का उपयोग भूमि के आकार को निर्धारित करने के लिए किया जाता है। यह एक बहुत बड़ी इकाई है जो लम्बाई और चौड़ाई के बीच का क्षेत्र मापती है। एक हेक्टर का माप लगभग 2.47 एकड़ होता है।<br>
+
+हेक्टर यूनिट को आमतौर पर भूमि के आकार को निर्धारित करने के लिए प्रयोग किया जाता है। इस इकाई का उपयोग खेती, वाणिज्यिक भूमि और निवासी भूमि के मापन में भी किया जाता है।<br>
+
+एक हेक्टर में लगभग 10000 वर्ग मीटर होते हैं जो लगभग 2.47 एकड़ के बराबर होते हैं। हेक्टर यूनिट भूमि के आकार को निर्धारित करने के लिए एक बहुत ही महत्वपूर्ण इकाई है और यह भूमि की खरीद और बिक्री के लिए आवश्यक होती है।
+  </p>
+</div>
+
+{% endblock %}

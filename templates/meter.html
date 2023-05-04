@@ -1,0 +1,50 @@
+{% extends 'base.html' %} 
+
+{% block bodycontent %}
+
+<div class="titlePage">
+    <h2>Valuation for Meter</h2>
+</div><br>
+
+<div class="myform">
+  <!-- feet -->
+  <div class="myform">
+    <div class="grid-container">
+
+      <div class="grid-input">
+        <form method="post">
+          {% csrf_token %}
+          <label for="mtr">Enter Meter value:</label>
+          <input type="text" id="mtr" name="mtr" required />
+          <input type="submit" value="Submit" />
+        </form>
+      </div>
+      <div class="grid-output">
+     <h4>Value of {{num}} Meter :-</h4> 
+        {% for i in answer %}
+          <p>{{i}}</p>
+        {% endfor %} 
+    </div>
+    
+    </div>   
+    
+  </div>
+    <!-- feet End -->
+
+</div>
+
+<div class="paraPart">
+  <p class="para">
+    मीटर एक मापन इकाई है जो लंबाई को निर्धारित करने के लिए प्रयुक्त होती है। यह एक SI मापन इकाई है और अंतर्राष्ट्रीय मानक मापन इकाई के रूप में उपयोग की जाती है।<br>
+
+एक मीटर का अर्थ होता है लंबाई का एक मापन जो सटीक होता है। इस इकाई का उपयोग विभिन्न उद्योगों में लंबाई, ऊंचाई, दूरी, तेजी आदि के मापन में किया जाता है।<br>
+
+एक मीटर का लम्बाई लगभग 3.28 फीट होती है। मीटर इकाई का उपयोग भारत में भी किया जाता है। सरकारी कार्यों में लंबाई, चौड़ाई और ऊंचाई के मापन में मीटर इकाई का उपयोग होता है।<br>
+
+इसके अलावा, विभिन्न उद्योगों जैसे कि विद्युत, इलेक्ट्रॉनिक्स, मॉटर वाहन निर्माण आदि में भी मीटर इकाई का उपयोग होता है। मीटर इकाई एक अत्यंत महत्वपूर्ण मापन इकाई है जो भूमि से लेकर ऊर्जा और तकनीकी क्षेत्र तक कई जगहों पर प्रयोग की जाती है।
+    
+  </p>
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,49 @@
+{% extends 'base.html' %} 
+
+{% block bodycontent %}
+
+<div class="titlePage">
+    <h2>Valuation for Bigha.</h2>
+</div><br>
+
+<div class="myform">
+  <!-- Bigha -->
+  <div class="myform">
+    <div class="grid-container">
+
+      <div class="grid-input">
+        <form method="post">
+          {% csrf_token %}
+          <label for="bigha">Enter Bigha value:</label>
+          <input type="text" id="bigha" name="bigha" required />
+          <input type="submit" value="Submit" />
+        </form>
+      </div>
+      <div class="grid-output">
+     <h4>Value of {{num}} Bigha :-</h4> 
+        {% for i in answer %}
+          <p>{{i}}</p>
+        {% endfor %} 
+    </div>
+    
+    </div>   
+    
+  </div>
+    <!-- Bigha End -->
+
+</div>
+
+<div class="paraPart">
+  <p class="para">
+    बिघा यूनिट एक मापन इकाई है जो भूमि का आकार निर्धारित करने के लिए प्रयुक्त होती है। इस इकाई का उपयोग भारत के कुछ राज्यों में भूमि के मापन के लिए किया जाता है।<br>
+
+बिघा यूनिट को लंबाई और चौड़ाई के संयोजन के रूप में व्यक्त किया जाता है। एक बिघा के अंतर्गत 20 बिस्वे होते हैं जो लगभग 1618 वर्ग मीटर के बराबर होते हैं। हम इस वेबसाइट में 1600 वर्ग मीटर प्रयोग कर रहे है।<br>
+
+बिघा यूनिट भारत के कुछ राज्यों में जैसे कि उत्तर प्रदेश, बिहार, पंजाब, हरियाणा, राजस्थान आदि में भूमि के मापन के लिए प्रयोग किया जाता है। इस इकाई का उपयोग खेती, वाणिज्यिक भूमि और निवासी भूमि के मापन में भी किया जाता है।<br>
+
+एक बिघा बहुत ही बड़ी इकाई होती है जो भूमि के आकार को निर्धारित करने के लिए प्रयोग की जाती है। इस इकाई का उपयोग खेती और वाणिज्यिक भूमि की खरीद और बिक्री के लिए भी किया जाता है।
+    
+  </p>
+</div>
+
+{% endblock %}
